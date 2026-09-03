@@ -1297,7 +1297,7 @@
         display: grid;
         grid-template-columns: 1.5fr 1fr 1fr 1fr;
         gap: 32px;
-        padding: 60px 0 30px;
+        padding: 60px 26px 30px;
       }
       .foot-grid h4 {
         font-size: 12px;
@@ -1361,6 +1361,93 @@
         border: 1px dashed var(--line);
         border-radius: 14px;
       }
+
+      /* =====================================================================
+         PHONE TIER — layout only. Nothing here changes colours, type or
+         content; nothing above 640px is affected.
+         ===================================================================== */
+      @media (max-width: 640px) {
+        /* gutters + vertical rhythm */
+        .wrap {
+          padding: 0 18px;
+        }
+        nav {
+          padding: 0 18px;
+        }
+        section {
+          padding: 52px 0;
+        }
+        section.wrap {
+          padding-top: 52px;
+          padding-bottom: 52px;
+        }
+        .sec-head {
+          margin-bottom: 32px;
+        }
+
+        /* keep a long open menu reachable on a short screen */
+        nav.open .menu {
+          max-height: calc(100vh - 70px);
+          overflow-y: auto;
+        }
+
+        /* long urls / emails never push the page wide */
+        body {
+          overflow-wrap: break-word;
+        }
+
+        /* hero */
+        header.hero {
+          padding: 96px 0 64px;
+        }
+        h1.title br {
+          display: none;
+        }
+
+        /* cards */
+        .explore-body {
+          padding: 20px;
+        }
+        .pf-left {
+          padding: 20px;
+        }
+        .newwine {
+          padding: 28px 22px;
+        }
+        .contact-card {
+          padding: 28px 20px;
+        }
+        .val,
+        .pillar,
+        .appr {
+          padding: 20px;
+        }
+
+        /* Instagram's embed.js sizes its own iframe wider than the gutters,
+           and positions it absolutely — so the wrapper must be its
+           containing block or the 100% resolves against the viewport */
+        .ig-embeds > div {
+          position: relative;
+        }
+        .ig-embeds iframe.instagram-media {
+          min-width: 0 !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        /* footer */
+        .foot-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 22px;
+          padding: 44px 18px 26px;
+        }
+        .foot-grid > div:first-child {
+          grid-column: 1 / -1;
+        }
+        .foot-grid p {
+          max-width: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1406,7 +1493,7 @@
           class="title"
           style="font-size: clamp(28px, 4.6vw, 50px); max-width: 26ch"
         >
-          A Network of Spirit-Filled<br />Churches &amp; Leaders
+          A Network of Spirit-Filled <br />Churches &amp; Leaders
         </h1>
         <p class="sub">
           We believe that the Kingdom of Heaven has come near and that Jesus has
@@ -1616,7 +1703,7 @@
             href="https://www.youtube.com/@immersenetwork6306"
             target="_blank"
             rel="noopener"
-            style="text-decoration: none; color: inherit"
+            style="text-decoration: none; color: inherit; margin-bottom: 10px"
             ><div class="w-badge bg-yt">
               <svg viewBox="0 0 24 24">
                 <path

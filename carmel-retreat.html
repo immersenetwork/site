@@ -353,6 +353,10 @@
           height: 260px;
         }
       }
+      /* two-up gallery — holds through tablet, collapses on phones */
+      .gallery-grid.cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       /* ABOUT strip */
       .about {
@@ -1051,7 +1055,7 @@
         display: grid;
         grid-template-columns: 1.5fr 1fr 1fr 1fr;
         gap: 32px;
-        padding: 60px 0 30px;
+        padding: 60px 26px 30px;
       }
       .foot-grid h4 {
         font-size: 12px;
@@ -1380,12 +1384,85 @@
         font-weight: 700;
         font-size: 22px;
       }
+      /* =====================================================================
+         PHONE TIER — layout only. Nothing here changes colours, type or
+         content; nothing above 640px is affected.
+         ===================================================================== */
       @media (max-width: 640px) {
         .event {
           flex-wrap: wrap;
+          gap: 16px;
+          padding: 18px;
         }
         .event .go {
           display: none;
+        }
+
+        /* gutters + vertical rhythm */
+        .wrap {
+          padding: 0 18px;
+        }
+        nav {
+          padding: 0 18px;
+        }
+        section {
+          padding: 52px 0;
+        }
+        section.wrap {
+          padding-top: 52px;
+          padding-bottom: 52px;
+        }
+        .sec-head {
+          margin-bottom: 32px;
+        }
+        .page-head {
+          padding: 56px 0 32px;
+        }
+
+        /* keep a long open menu reachable on a short screen */
+        nav.open .menu {
+          max-height: calc(100vh - 70px);
+          overflow-y: auto;
+        }
+
+        /* long urls / emails never push the page wide */
+        body {
+          overflow-wrap: break-word;
+        }
+
+        /* stack the grids that are still multi-column at this width */
+        .gallery-grid.cols-2 {
+          grid-template-columns: 1fr;
+        }
+        .details {
+          grid-template-columns: 1fr;
+        }
+
+        /* cards */
+        .pf-left {
+          padding: 20px;
+        }
+        .newwine {
+          padding: 28px 22px;
+        }
+        .val,
+        .pillar,
+        .appr,
+        .detail {
+          padding: 20px;
+        }
+
+        /* footer */
+        .foot-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 22px;
+          padding: 44px 18px 26px;
+        }
+        .foot-grid > div:first-child {
+          grid-column: 1 / -1;
+        }
+        .foot-grid p {
+          max-width: none;
         }
       }
     </style>
@@ -1480,7 +1557,7 @@
         <div class="kicker">Gallery</div>
         <h2>Moments from the retreat</h2>
       </div>
-      <div class="gallery-grid" style="grid-template-columns: repeat(2, 1fr)">
+      <div class="gallery-grid cols-2">
         <img
           src="assets/carmel-retreat-1.jpg"
           alt="Teaching session at Carmel Retreat"
