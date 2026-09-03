@@ -1192,7 +1192,7 @@
         letter-spacing: 0.02em;
       }
       .member .ph img {
-        filter: grayscale(100%);
+        z-index: 1;
       }
       .member .ph span {
         position: relative;
@@ -1209,6 +1209,14 @@
         filter: blur(8px);
         bottom: -14px;
         right: -6px;
+      }
+      /* real photos fill the circle on their own — drop the gradient
+         fill and the blurred accent blob so nothing sits over a face */
+      .member .ph:has(img) {
+        background: none;
+      }
+      .member .ph:has(img)::after {
+        display: none;
       }
       .member h3 {
         color: var(--brand);
@@ -1810,9 +1818,6 @@
           </p>
         </div>
       </div>
-      <div class="note" style="margin-top: 22px">
-        📸 <b>Photos:</b> The whole team now shows real headshots, in grayscale.
-      </div>
     </section>
 
     <section id="new-wine" class="wrap" style="padding-top: 20px">
@@ -1896,7 +1901,8 @@
           <h4>About</h4>
           <a href="#history">Our History</a><a href="#vision">Our Vision</a
           ><a href="#approach">Our Approach</a><a href="#values">Our Values</a
-          ><a href="#team">Meet the Team</a><a href="#new-wine">New Wine Global</a>
+          ><a href="#team">Meet the Team</a
+          ><a href="#new-wine">New Wine Global</a>
         </div>
         <div>
           <h4>Connect</h4>
@@ -1909,9 +1915,7 @@
           <a href="index.html#contact">Contact</a>
         </div>
       </div>
-      <div class="foot-bottom">
-        © 2024 by Immerse Network South Africa · Redesign concept
-      </div>
+      <div class="foot-bottom">© 2024 by Immerse Network South Africa</div>
     </footer>
     <script>
       document.addEventListener("click", function (e) {
