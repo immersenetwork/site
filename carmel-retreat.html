@@ -114,6 +114,7 @@
         background: var(--brand);
         color: #fff;
         letter-spacing: 0.06em;
+        margin-left: 5px;
       }
       .menu .cta:hover {
         background: var(--brand-deep);
@@ -194,6 +195,7 @@
         .menu .cta {
           text-align: center;
           margin-top: 4px;
+          margin-left: 0;
         }
         .has-drop {
           flex-direction: column;
@@ -941,17 +943,51 @@
         gap: 18px;
       }
       .appr {
-        background: var(--panel);
-        border: 1px solid var(--line);
+        position: relative;
         border-radius: var(--r);
         padding: 28px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        background-color: var(--brand-deep);
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 18px 40px -24px rgba(12, 50, 58, 0.6);
+      }
+      .appr::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(5, 64, 78, 0.15) 0%,
+          rgba(5, 64, 78, 0.55) 45%,
+          rgba(5, 64, 78, 0.9) 100%
+        );
+      }
+      .appr > * {
+        position: relative;
+      }
+      .approach-grid .appr:nth-child(1) {
+        background-image: url("assets/immerse-guest-speakers-2.jpeg");
+      }
+      .approach-grid .appr:nth-child(2) {
+        background-image: url("assets/carmel-retreat-3.jpg");
+      }
+      .approach-grid .appr:nth-child(3) {
+        background-image: url("assets/gallery-community.jpg");
+      }
+      .approach-grid .appr:nth-child(4) {
+        background-image: url("assets/immerse-guest-speakers-1.jpeg");
       }
       .appr .n {
         width: 40px;
         height: 40px;
         border-radius: 11px;
-        background: var(--brand);
-        color: #fff;
+        background: rgba(255, 255, 255, 0.92);
+        color: var(--brand);
         display: grid;
         place-items: center;
         font-weight: 700;
@@ -959,14 +995,14 @@
         margin-bottom: 14px;
       }
       .appr h3 {
-        color: var(--brand);
+        color: #fff;
         font-size: 18px;
         margin-bottom: 8px;
         letter-spacing: -0.01em;
       }
       .appr p {
         font-size: 14px;
-        color: var(--body);
+        color: rgba(255, 255, 255, 0.88);
         line-height: 1.6;
       }
       @media (max-width: 900px) {
@@ -1754,8 +1790,8 @@
       <div class="details">
         <div class="detail">
           <div class="k">When</div>
-          <div class="v">To be confirmed</div>
-          <small>Held annually</small>
+          <div class="v">10–13 May 2027</div>
+          <small>Monday to Thursday · held annually</small>
         </div>
         <div class="detail">
           <div class="k">Where</div>
@@ -1777,17 +1813,11 @@
         <div>
           <h3>Register your interest</h3>
           <p>
-            Want to join us at the next Carmel Retreat? Let us know and we’ll be
-            in touch with dates, venue and booking details as soon as they’re
-            confirmed.
+            Want to join us at Carmel Retreat 2027? Let us know and we’ll be in
+            touch with venue and booking details as soon as they’re confirmed.
           </p>
         </div>
         <a href="index.html#contact" class="btn btn-primary">Get in touch ▸</a>
-      </div>
-      <div class="note" style="margin-top: 22px">
-        📝 <b>Placeholder details:</b> dates, venue, cost and booking aren’t on
-        the current site yet — send me the specifics and I’ll drop them straight
-        into these cards.
       </div>
     </section>
 
@@ -1868,7 +1898,7 @@
           <a href="index.html#contact">Contact</a>
         </div>
       </div>
-      <div class="foot-bottom">© 2024 by Immerse Network South Africa</div>
+      <div class="foot-bottom">© 2026 by Immerse Network South Africa</div>
     </footer>
     <script>
       document.addEventListener("click", function (e) {
