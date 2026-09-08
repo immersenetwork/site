@@ -525,136 +525,62 @@ h1.title {
 }
 
 /* ---------- PODCAST ---------- */
+/* Spotify's own show embed carries the full, always-current episode list,
+   so the page only styles the frame around it. */
 .podcast {
-  height: 470px;
   border-radius: var(--r-lg);
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--brand-deep);
   color: var(--white);
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
   box-shadow: var(--shadow);
-}
-.pf-left {
-  height: 100%;
-  overflow: hidden;
-  padding: 28px 28px 26px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--glass);
 }
-.pf-lab {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
+.podcast-bar {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 14px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--glass);
 }
-.pf-lab svg {
-  width: 20px;
-  height: 20px;
+.podcast-bar > svg {
+  width: 26px;
+  height: 26px;
+  flex: none;
   fill: #1db954;
 }
-.pf-left h3 {
-  font-size: 19px;
-  line-height: 1.3;
-  margin: 12px 0 16px;
-  font-weight: 700;
-}
-.pf-embed {
+.podcast-head {
   flex: 1;
-  min-height: 232px;
-  border-radius: 14px;
-  overflow: hidden;
-}
-.pf-embed iframe {
-  border: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 232px;
-}
-.pf-right {
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.pf-rhead {
-  padding: 24px 22px 12px;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--on-brand-dim);
-}
-.pf-list {
-  flex: 1;
-  overflow-y: auto;
-  padding: 0 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.pf-list::-webkit-scrollbar {
-  width: 8px;
-}
-.pf-list::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
-}
-.ep {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  padding: 11px 12px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.16s;
-}
-.ep:hover {
-  background: rgba(255, 255, 255, 0.09);
-}
-.ep.active {
-  background: rgba(255, 255, 255, 0.16);
-}
-.ep .pbtn {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.13);
-  flex: none;
-  display: grid;
-  place-items: center;
-}
-.ep .pbtn::after {
-  content: "";
-  border-left: 11px solid var(--white);
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  margin-left: 3px;
-}
-.ep .meta {
   min-width: 0;
 }
-.ep .meta b {
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.3;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.ep .meta small {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
+.podcast-head .kicker {
   display: block;
-  margin-top: 2px;
+}
+.podcast-head b {
+  display: block;
+  margin-top: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.podcast-follow {
+  flex: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.podcast-follow:hover {
+  text-decoration: underline;
+}
+.podcast-embed {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 520px;
 }
 
 /* ---------- INSTAGRAM EMBEDS ---------- */
@@ -1326,19 +1252,12 @@ TABLET — 900px
     grid-template-columns: repeat(2, 1fr);
   }
   /* PODCAST */
-  .podcast {
-    grid-template-columns: 1fr;
-    height: auto;
+  .podcast-bar {
+    flex-wrap: wrap;
+    gap: 10px 14px;
   }
-  .pf-left {
-    border-right: 0;
-    border-bottom: 1px solid var(--glass);
-  }
-  .pf-embed {
-    min-height: 200px;
-  }
-  .pf-right {
-    max-height: 320px;
+  .podcast-embed {
+    height: 460px;
   }
   /* INSTAGRAM EMBEDS */
   .ig-embeds {
@@ -1452,8 +1371,8 @@ PHONE TIER — layout only. Nothing here changes colours, type
   .explore-body {
     padding: 20px;
   }
-  .pf-left {
-    padding: 20px;
+  .podcast-bar {
+    padding: 16px;
   }
   .newwine {
     padding: 28px 22px;
