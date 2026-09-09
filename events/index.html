@@ -4,36 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upcoming Events — Immerse Network South Africa</title>
-    <link rel="stylesheet" href="assets/tokens.css" />
-    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body data-page="events">
-    <!-- NAV — byte-identical on every page. The active link is styled
-         from <body data-page="..."> in assets/site.css, so nothing in
-         here changes between pages: edit once, paste into all four. -->
+    <!-- NAV — identical on every page apart from link depth: root pages
+         use "about/", pages in a folder use "../about/". The active link
+         is styled from <body data-page="..."> against the data-nav
+         attributes below, in assets/css/styles.css. -->
     <nav>
-      <a class="logo" href="index.html" style="text-decoration: none"
+      <a class="logo" href="../" style="text-decoration: none"
         ><img
           class="logo-img logo-icon"
-          src="assets/immerse-icon.png"
+          src="../assets/images/immerse-icon.png"
           alt="Immerse"
       /></a>
       <div class="menu">
-        <a href="index.html">HOME</a>
+        <a data-nav="home" href="../">HOME</a>
         <div class="has-drop">
-          <a href="about.html">ABOUT ▾</a>
+          <a href="../about/">ABOUT ▾</a>
           <div class="drop">
-            <a href="about.html#history">Our History</a>
-            <a href="about.html#vision">Our Vision</a>
-            <a href="about.html#approach">Our Approach</a>
-            <a href="about.html#values">Our Values</a>
-            <a href="about.html#team">Meet the Team</a>
-            <a href="about.html#new-wine">New Wine Global</a>
+            <a href="../about/#history">Our History</a>
+            <a href="../about/#vision">Our Vision</a>
+            <a href="../about/#approach">Our Approach</a>
+            <a href="../about/#values">Our Values</a>
+            <a href="../about/#team">Meet the Team</a>
+            <a href="../about/#new-wine">New Wine Global</a>
           </div>
         </div>
-        <a href="carmel-retreat.html">CARMEL RETREAT</a>
-        <a href="events.html">UPCOMING EVENTS</a>
-        <a href="index.html#contact" class="cta">CONTACT</a>
+        <a data-nav="carmel" href="../carmel-retreat/">CARMEL RETREAT</a>
+        <a data-nav="events" href="../events/">UPCOMING EVENTS</a>
+        <a href="../#contact" class="cta">CONTACT</a>
       </div>
       <button class="burger">☰</button>
     </nav>
@@ -51,7 +54,7 @@
 
     <section class="wrap" style="padding-top: 40px">
       <div class="events-list">
-        <a class="event" href="carmel-retreat.html">
+        <a class="event" href="../carmel-retreat/">
           <div class="date">
             <div class="m">May 2027</div>
             <div class="d range">10-13</div>
@@ -67,7 +70,7 @@
           </div>
           <div class="go">›</div>
         </a>
-        <a class="event" href="index.html#contact">
+        <a class="event" href="../#contact">
           <div class="date">
             <div class="m">TBC</div>
             <div class="d">—</div>
@@ -82,7 +85,7 @@
           </div>
           <div class="go">›</div>
         </a>
-        <a class="event" href="index.html#contact">
+        <a class="event" href="../#contact">
           <div class="date">
             <div class="m">TBC</div>
             <div class="d">—</div>
@@ -101,7 +104,7 @@
           </div>
           <div class="go">›</div>
         </a>
-        <a class="event" href="index.html#contact">
+        <a class="event" href="../#contact">
           <div class="date">
             <div class="m">TBC</div>
             <div class="d">—</div>
@@ -129,7 +132,7 @@
               or listen back to teaching from past gatherings on the podcast.
             </p>
           </div>
-          <a href="index.html#contact" class="btn btn-primary"
+          <a href="../#contact" class="btn btn-primary"
             >Get in touch ▸</a
           >
         </div>
@@ -145,7 +148,7 @@
           <div class="logo" style="color: #fff; margin-bottom: 12px">
             <img
               class="logo-img"
-              src="assets/immerse-logo-white.png"
+              src="../assets/images/immerse-logo-white.png"
               alt="Immerse Network"
             />
           </div>
@@ -198,26 +201,26 @@
         </div>
         <div>
           <h4>About</h4>
-          <a href="about.html#history">Our History</a
-          ><a href="about.html#vision">Our Vision</a
-          ><a href="about.html#approach">Our Approach</a
-          ><a href="about.html#values">Our Values</a
-          ><a href="about.html#team">Meet the Team</a
-          ><a href="about.html#new-wine">New Wine Global</a>
+          <a href="../about/#history">Our History</a
+          ><a href="../about/#vision">Our Vision</a
+          ><a href="../about/#approach">Our Approach</a
+          ><a href="../about/#values">Our Values</a
+          ><a href="../about/#team">Meet the Team</a
+          ><a href="../about/#new-wine">New Wine Global</a>
         </div>
         <div>
           <h4>Connect</h4>
-          <a href="carmel-retreat.html">Carmel Retreat</a
-          ><a href="index.html#connect">Listen</a
-          ><a href="events.html">Upcoming Events</a>
+          <a href="../carmel-retreat/">Carmel Retreat</a
+          ><a href="../#connect">Listen</a
+          ><a href="../events/">Upcoming Events</a>
         </div>
         <div>
           <h4>Get in touch</h4>
-          <a href="index.html#contact">Contact</a>
+          <a href="../#contact">Contact</a>
         </div>
       </div>
       <div class="foot-bottom">© 2026 by Immerse Network South Africa</div>
     </footer>
-    <script src="assets/site.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
   </body>
 </html>

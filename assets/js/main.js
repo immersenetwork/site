@@ -1,7 +1,7 @@
 /* =====================================================================
    IMMERSE NETWORK — site script
    The ONE place behaviour lives. Every page loads this file with
-   <script src="assets/site.js" defer></script>; no page has an inline
+   <script src="assets/js/main.js" defer></script>; no page has an inline
    <script> block. Both features below no-op on pages that lack the
    markup they drive, so the same file is safe everywhere.
    ===================================================================== */

@@ -2,10 +2,10 @@
    IMMERSE NETWORK — design tokens
    The ONE place colours, geometry and the font stack live. Change a
    value here and the whole site recolours, including the swatch sheet
-   in immerse-color-palette.html, which reads its captions back out of
+   in immerse-color-palette/index.html, which reads its captions back out of
    these same tokens.
 
-   Loaded by every page BEFORE assets/site.css. It is kept separate so
+   Loaded by every page BEFORE assets/css/styles.css. It is kept separate so
    the palette sheet can take the tokens without inheriting the site's
    component styles.
    ===================================================================== */

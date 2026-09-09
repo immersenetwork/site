@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Immerse Network — Colour Palette</title>
-    <!-- Tokens come from assets/tokens.css, so this sheet can never
+    <!-- Tokens come from assets/css/tokens.css, so this sheet can never
          disagree with the site. Swatch colours use var(--token) and the
          hex captions are read back out of those tokens at the bottom of
          the page — there is no hex code written by hand anywhere here. -->
-    <link rel="stylesheet" href="assets/tokens.css" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
     <style>
       body {
         padding: 56px 28px 72px;
@@ -243,7 +245,7 @@
 
     <script>
       /* Read each caption straight out of the token it documents, so the
-         sheet and assets/site.css can never drift apart. getComputedStyle
+         sheet and assets/css/styles.css can never drift apart. getComputedStyle
          needs no fetch, so this works over file:// too. */
       var css = getComputedStyle(document.documentElement);
       document.querySelectorAll("[data-token]").forEach(function (el) {

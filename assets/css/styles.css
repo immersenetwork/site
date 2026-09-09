@@ -4,10 +4,10 @@
    no page has an inline <style> block, so a change here lands on the
    whole site at once.
 
-   Colours come from assets/tokens.css, which every page loads first.
+   Colours come from assets/css/tokens.css, which every page loads first.
    Load order in each page's <head>:
-       <link rel="stylesheet" href="assets/tokens.css" />
-       <link rel="stylesheet" href="assets/site.css" />
+       <link rel="stylesheet" href="assets/css/tokens.css" />
+       <link rel="stylesheet" href="assets/css/styles.css" />
    ===================================================================== */
 
 /* ---------- BASE ---------- */
@@ -166,7 +166,7 @@ header.hero {
       rgba(255, 255, 255, 0.72) 93%,
       var(--page) 100%
     ),
-    url("hero.jpeg") center/cover no-repeat;
+    url("../images/hero.jpeg") center/cover no-repeat;
 }
 .eyebrow {
   display: inline-flex;
@@ -838,16 +838,16 @@ h1.title {
   position: relative;
 }
 .approach-grid .appr--photo:nth-child(1) {
-  background-image: url("immerse-guest-speakers-2.jpeg");
+  background-image: url("../images/immerse-guest-speakers-2.jpeg");
 }
 .approach-grid .appr--photo:nth-child(2) {
-  background-image: url("carmel-retreat-3.jpg");
+  background-image: url("../images/carmel-retreat-3.jpg");
 }
 .approach-grid .appr--photo:nth-child(3) {
-  background-image: url("gallery-community.jpg");
+  background-image: url("../images/gallery-community.jpg");
 }
 .approach-grid .appr--photo:nth-child(4) {
-  background-image: url("immerse-guest-speakers-1.jpeg");
+  background-image: url("../images/immerse-guest-speakers-1.jpeg");
 }
 .appr--photo .n {
   width: 40px;
@@ -1286,12 +1286,13 @@ body:not([data-page="home"]) .page-head {
 
 /* =====================================================================
 ACTIVE NAV LINK — driven by <body data-page="...">, so the nav markup
-  stays byte-identical on every page.
+  stays identical on every page apart from its relative link
+  depth (root pages link to "about/", subpages to "../about/").
   ===================================================================== */
-body[data-page="home"] .menu > a[href="index.html"],
+body[data-page="home"] .menu > a[data-nav="home"],
 body[data-page="about"] .menu .has-drop > a,
-body[data-page="carmel"] .menu > a[href="carmel-retreat.html"],
-body[data-page="events"] .menu > a[href="events.html"] {
+body[data-page="carmel"] .menu > a[data-nav="carmel"],
+body[data-page="events"] .menu > a[data-nav="events"] {
   color: var(--brand);
 }
 
