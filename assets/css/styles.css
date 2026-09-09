@@ -1073,15 +1073,27 @@ h1.title {
   margin-top: 5px;
 }
 .member .member-email {
-  display: inline-block;
-  margin-top: 6px;
-  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 0 20px;
+  height: 38px;
+  border-radius: var(--r-pill);
+  background: var(--brand);
+  color: var(--white);
+  font-family: var(--font);
   font-size: 12px;
-  text-decoration: underline;
-  word-break: break-all;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
 }
 .member .member-email:hover {
-  color: var(--accent);
+  background: var(--brand-deep);
+  color: var(--white);
+  transform: translateY(-2px);
 }
 .member p {
   color: var(--body);
