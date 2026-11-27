@@ -1344,9 +1344,9 @@ dialog.lightbox .close {
 .announce-in {
   display: flex;
   align-items: center;
-  gap: 18px 26px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  gap: 12px 26px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   flex-wrap: wrap;
 }
 .announce .kicker { margin: 0; }
@@ -1741,8 +1741,8 @@ PHONE TIER — layout only. Nothing here changes colours, type
     width: 72px;
   }
   .announce-in {
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 18px;
+    padding-bottom: 20px;
   }
   .details {
     grid-template-columns: 1fr;
