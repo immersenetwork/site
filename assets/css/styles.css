@@ -1307,7 +1307,9 @@ dialog.lightbox {
   margin: auto;
   overflow: visible;
 }
-dialog.lightbox::backdrop { background: rgba(5, 64, 78, 0.86); }
+dialog.lightbox::backdrop {
+  background: color-mix(in srgb, var(--brand-deep) 86%, transparent);
+}
 dialog.lightbox img {
   display: block;
   max-width: 100%;
@@ -1340,7 +1342,9 @@ dialog.lightbox .close {
   text-decoration: none;
   transition: background 0.2s;
 }
-.announce:hover { background: #e2eff1; }
+.announce:hover {
+  background: color-mix(in srgb, var(--panel) 92%, var(--brand));
+}
 .announce-in {
   display: flex;
   align-items: center;
