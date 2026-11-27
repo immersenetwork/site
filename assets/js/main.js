@@ -36,3 +36,31 @@ document.querySelectorAll(".pf-list .ep[data-ep]").forEach(function (ep) {
     ep.classList.add("active");
   });
 });
+
+/* Event flyer lightbox. A .flyer[data-flyer] button opens the full-size
+   flyer in a <dialog>; click anywhere or press Esc to close. Only present
+   on the Upcoming Events page. */
+(function () {
+  var flyers = document.querySelectorAll(".flyer[data-flyer]");
+  if (!flyers.length) return;
+  var dlg = document.createElement("dialog");
+  dlg.className = "lightbox";
+  dlg.innerHTML =
+    '<button class="close" type="button" aria-label="Close">×</button><img alt="" />';
+  document.body.appendChild(dlg);
+  var img = dlg.querySelector("img");
+  dlg.addEventListener("click", function () {
+    dlg.close();
+  });
+  flyers.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      img.src = btn.getAttribute("data-flyer");
+      var thumb = btn.querySelector("img");
+      img.alt = thumb ? thumb.alt : "";
+      if (dlg.showModal) dlg.showModal();
+      else window.open(img.src, "_blank");
+    });
+  });
+})();

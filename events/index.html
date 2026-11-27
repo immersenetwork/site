@@ -54,21 +54,78 @@
 
     <section class="wrap" style="padding-top: 40px">
       <div class="events-list">
-        <a class="event" href="../#contact">
-          <div class="date">
-            <div class="m">Feb 2027</div>
-            <div class="d">—</div>
-          </div>
+        <!-- Events with a sign-up form are <article>s: the title link is
+             stretched over the whole card (opens the form in a new tab),
+             and the flyer thumbnail sits above it so a click on the flyer
+             opens it full size instead. Flyer images live in
+             assets/images/ as a full-size JPG plus a -thumb JPG. -->
+        <article class="event has-flyer">
+          <button
+            class="flyer"
+            type="button"
+            data-flyer="../assets/images/flyer-immerse-intensive-2027.jpg"
+            aria-label="View the Immerse Intensive flyer full size"
+          >
+            <img
+              src="../assets/images/flyer-immerse-intensive-2027-thumb.jpg"
+              alt="Immerse Intensive 2027 flyer"
+              loading="lazy"
+            />
+            <span class="zoom" aria-hidden="true">+</span>
+          </button>
           <div class="info">
-            <h3>The Immerse Gathering</h3>
-            <div class="loc">Connect Church · Venue TBC</div>
+            <h3>
+              <a
+                class="event-link"
+                href="https://forms.gle/priCbujkAxwHu92B9"
+                target="_blank"
+                rel="noopener"
+                >Immerse Intensive</a
+              >
+            </h3>
+            <div class="loc">
+              9–11 Feb 2027 · Lighthouse Family Church, Gqeberha
+            </div>
             <p>
-              The Immerse Gathering is coming in February 2027. Pencil it in
-              now and bring your team.
+              Three days set apart to equip and activate for the Kingdom of God
+              by the power of the Spirit. Join us to explore the biblical
+              framework and spiritual formation of learning from Jesus his way
+              of life and ministry.
             </p>
+            <div class="event-meta">
+              <span class="tag">R300</span>
+              <span class="reg">Register now ▸</span>
+            </div>
           </div>
           <div class="go">›</div>
-        </a>
+        </article>
+        <article class="event">
+          <div class="date">
+            <div class="m">Feb 2027</div>
+            <div class="d">20</div>
+          </div>
+          <div class="info">
+            <h3>
+              <a
+                class="event-link"
+                href="https://forms.gle/e2HyXPsjkXisPPim8"
+                target="_blank"
+                rel="noopener"
+                >Immerse Worship Gathering</a
+              >
+            </h3>
+            <div class="loc">20 Feb 2027 · Connect Church</div>
+            <p>
+              An evening of worship, fellowship and the presence of the Holy
+              Spirit. Pencil it in now and bring your team.
+            </p>
+            <div class="event-meta">
+              <span class="tag">Cost TBC</span>
+              <span class="reg">Register now ▸</span>
+            </div>
+          </div>
+          <div class="go">›</div>
+        </article>
         <a class="event" href="../carmel-retreat/">
           <div class="date">
             <div class="m">May 2027</div>
@@ -96,25 +153,6 @@
             <p>
               A relational gathering for leaders in the region to connect, pray
               and encourage one another.
-            </p>
-          </div>
-          <div class="go">›</div>
-        </a>
-        <a class="event" href="../#contact">
-          <div class="date">
-            <div class="m">TBC</div>
-            <div class="d">—</div>
-          </div>
-          <div class="info">
-            <h3>
-              Immerse Intensive: Key Theological and Practical Ministry
-              Approach
-            </h3>
-            <div class="loc">Location TBC</div>
-            <p>
-              A focused time of teaching on key theological foundations and
-              practical ministry approach, equipping leaders to walk in Spirit
-              life and ministry.
             </p>
           </div>
           <div class="go">›</div>
