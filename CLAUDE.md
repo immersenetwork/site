@@ -44,4 +44,7 @@ page list, shared files and how to preview locally.
 ## Checking changes
 
 - Prefer quick text-level checks such as `rg` and `git diff` after edits.
-- The user can do visual checks, so avoid lengthy browser testing unless asked.
+- After every change, take before-and-after screenshots of each page you
+  changed, at desktop (1280px) and mobile (390px) widths, and show them to
+  the user before asking about the PR into `main`. Serve the site locally
+  (see README.md) to take them; "before" is `main`, "after" is `develop`.
